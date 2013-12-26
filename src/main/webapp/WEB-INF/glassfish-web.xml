@@ -1,0 +1,12 @@
+
+<session-config>
+  <session-manager persistence-type="coherence-web">
+    <manager-properties>
+      <property name="repositoryUrl" value="http://localhost:8091/pools"/>
+      <property name="repositoryBucket" value="default"/>
+      <property name="sticky" value="true"/>
+      <property name="lockTime" value="30"/>
+      <property name="persistTo" value="ONE"/>
+    </manager-properties>
+  </session-manager>
+</session-config>

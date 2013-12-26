@@ -145,8 +145,8 @@ if(request.getParameter("refresh")!=null)
 				    {
 					
 				 	CloudEntityManager em = mf.getEntityManagerFactory().createCloudEntityManager();
-					List<UserRatings> ratings =em.createQuery("SELECT ur FROM UserRatings ur WHERE email=:email")
-							.setParameter("email", usermail).getResultList();
+					List<UserRatings> ratings =em.createQuery("SELECT ur FROM UserRatings ur  WHERE ur.email=:mail")
+							.setParameter("mail", usermail).getResultList();
 					
 					
 					for (UserRatings ur : ratings) {
