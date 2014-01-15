@@ -28,6 +28,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -37,6 +42,8 @@ import javax.servlet.http.HttpServletResponse;
 public class InsertQuestionsServlet extends HttpServlet {
 	private static final long serialVersionUID = 5909797442154638761L;
 
+
+	
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -53,11 +60,13 @@ public class InsertQuestionsServlet extends HttpServlet {
 		this.doPost(request, response);
 	}
 
+	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
 	protected void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
+		
 		Logger l=Logger.getLogger(this.getClass().getName());
 		l.info("Inserting questions...");
 		request.setCharacterEncoding("UTF-8");
@@ -76,6 +85,7 @@ public class InsertQuestionsServlet extends HttpServlet {
 		reading.add("For your opinion, how much is the weight of the consumerism in the publishing?");
 		reading.add("For your opinion, how much is the weight of the media in the choice of readers?");
 		mf.getEntityManagerFactory().createCloudEntityManager().persist(new Topic("Reading",reading));
+	
 		l.info("Reading questions added.");
 			
 		ArrayList<String> cinema=new ArrayList<String>();
