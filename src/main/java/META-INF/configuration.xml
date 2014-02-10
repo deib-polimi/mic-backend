@@ -23,14 +23,7 @@
 <vendor>Glassfish</vendor>
 <services>
 <sql>
-<connection string="THE-CONNECTION-STRING-TO-YOUR-DATABASE"/>
-<blobconnection string="THE-CONNECTION-STRING-TO-YOUR-BLOB-DATABASE"/>
+<connection string="jdbc:mysql://:3306/mic_db"/>
 </sql>
-<mail>
-<account_info username="YOUR-EMAIL" password="YOUR-EMAIL-PASSWORD"/>/>
-</mail>
-<memcache>
-<host address="127.0.0.1" port="11211"/>
-</memcache>
 </services>
 </configurations>
