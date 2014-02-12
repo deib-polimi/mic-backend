@@ -30,4 +30,6 @@ MiC uses the CPIM to access the following services:
 ¥ Task Queue Service: used to record requests for computation of lists of similar . The Consumer for these services is represented by the class TaskQueueHandler, who has the task of read requests , invoke the task of computing associate and delete it from the queue.
 
 The application also takes advantage of the opportunity provided by the CPIM to be deployed to a single Virtual Machine, or be divided into two tiers , splitting the frontend to the backend , consisting of the servlet that performs the calculation of similarity . These two parts will be loaded on two different instances , allowing you to move the computational load of calculating Best Contacts on a dedicated VM.
-For the correct configuration of files containing the metadata needed to use the CPIM ( configuration.xml , persistence.xml and queue.xml ) and the setup of the architecture , please refer to the user manual of the CPIM library in the section about the deploy on Glassfish AS.
+For the correct configuration of files containing the metadata needed to use the CPIM ( configuration.xml , persistence.xml and queue.xml ) and the setup of the architecture , please refer to the user manual of the CPIM library in the section about the deploy on Glassfish AS. You can find the CPIM library project at the following link on github:
+
+https://github.com/deib-polimi/cpim-library
